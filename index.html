@@ -3,196 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A210041_AleeyaZahiraa_DrNazatul_Project2</title>
-
+<title>NutriLink | Aleeya Zahiraa</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f5f7fa;
-}
-
-header{
-    background:#2c3e50;
-    color:white;
-    padding:40px;
-    text-align:center;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:#fffdf5;color:#333}
 nav{
-    background:#34495e;
-    padding:15px;
-    text-align:center;
+position:fixed;top:0;width:100%;z-index:999;
+background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 8%;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
+.logo{font-size:1.5rem;font-weight:700;color:#f4b400}
+nav ul{display:flex;gap:24px;list-style:none}
+nav a{text-decoration:none;color:#333;font-weight:600}
+.hero{
+min-height:100vh;
+display:flex;align-items:center;justify-content:center;
+padding:120px 8% 60px;
+background:linear-gradient(135deg,#fff7d6,#ffd54f);
 }
-
-section{
-    background:white;
-    margin:20px;
-    padding:25px;
-    border-radius:10px;
+.hero-content{
+display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
+max-width:1200px;width:100%;
 }
-
-h2{
-    color:#2c3e50;
+.hero img{
+width:350px;height:350px;object-fit:cover;border-radius:50%;
+border:8px solid white;box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
-
-.card{
-    border:1px solid #ddd;
-    padding:15px;
-    margin-top:10px;
-    border-radius:8px;
+.hero-text h1{font-size:4rem;color:#5d4037}
+.hero-text h2{font-size:1.5rem;color:#ff8f00;margin:10px 0}
+.hero-text p{margin:20px 0}
+.btn{
+display:inline-block;padding:12px 22px;margin-right:10px;
+background:#f4b400;color:white;text-decoration:none;border-radius:30px;
+font-weight:600;
 }
-
+.section{padding:90px 8%}
+.section-title{text-align:center;font-size:2.5rem;color:#5d4037;margin-bottom:40px}
+.about-card,.project-card,.timeline-item,.lab-card{
+background:white;border-radius:20px;padding:25px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+.about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.lab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.lab-card h3{color:#ff8f00;margin-bottom:10px}
+.card-btn{display:inline-block;margin-top:10px;padding:8px 14px;background:#f4b400;color:white;text-decoration:none;border-radius:20px}
+.timeline{max-width:900px;margin:auto}
+.timeline-item{margin-bottom:20px}
+.skills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.skill{
+padding:10px 18px;border-radius:25px;
+background:#ffe082;font-weight:600;
+}
 footer{
-    background:#2c3e50;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:#5d4037;color:white;text-align:center;padding:30px;
+}
+@media(max-width:900px){
+.hero-content{grid-template-columns:1fr;text-align:center}
+.hero img{margin:auto;width:260px;height:260px}
+.hero-text h1{font-size:2.8rem}
+.about-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
-
 <body>
 
-<header>
-<h1>Mobile Programming E-Portfolio</h1>
-<h3>Aleeya Zahiraa</h3>
-<p>A210041</p>
-<p>SDG 2 : Zero Hunger</p>
-</header>
-
 <nav>
-<a href="#profile">Profile</a>
-<a href="#labs">Labs</a>
-<a href="#project1">Project 1</a>
-<a href="#project2">Project 2</a>
-<a href="#reflection">Reflection</a>
-<a href="#skills">Skills</a>
+<div class="logo">🍎 NutriLink</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#labs">Labs</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#journey">Journey</a></li>
+<li><a href="#skills">Skills</a></li>
+</ul>
 </nav>
 
-<section id="profile">
-<h2>Student Profile</h2>
-
-<p><b>Name:</b> Aleeya Zahiraa</p>
-<p><b>Matric Number:</b> A210041</p>
-<p><b>Instructor:</b> Dr Nazatul</p>
-<p><b>SDG:</b> SDG 2 - Zero Hunger</p>
-
-<p>
-This e-Portfolio documents my learning journey throughout
-the Mobile Programming course.
-</p>
-
-</section>
-
-<section id="labs">
-<h2>Lab Submissions</h2>
-
-<div class="card">
-<h3>Lab 1</h3>
-<p>Screenshot</p>
-<p>YouTube Link</p>
-<p>Reflection</p>
+<section class="hero">
+<div class="hero-content">
+<div class="hero-text">
+<h1>Aleeya Zahiraa</h1>
+<h2>Mobile Programming E‑Portfolio</h2>
+<p>Bachelor of Software Engineering | SDG 2: Zero Hunger</p>
+<p>NutriLink is a food sustainability application developed to reduce food waste and support communities through technology.</p>
+<a class="btn" href="#projects">View Projects</a>
+<a class="btn" href="#labs">Learning Journey</a>
 </div>
-
-<div class="card">
-<h3>Lab 2</h3>
-<p>Screenshot</p>
-<p>YouTube Link</p>
-<p>Reflection</p>
+<div style="text-align:center">
+<img src="profile.jpg" alt="Profile">
 </div>
-
-<div class="card">
-<h3>Lab 3</h3>
-<p>Screenshot</p>
-<p>YouTube Link</p>
-<p>Reflection</p>
 </div>
+</section>
 
-<div class="card">
-<h3>Lab 4</h3>
-<p>Screenshot</p>
-<p>YouTube Link</p>
-<p>Reflection</p>
+<section class="section" id="about">
+<h2 class="section-title">About Me</h2>
+<div class="about-grid">
+<div class="about-card">
+<h3>Student Information</h3>
+<p><strong>Name:</strong> Aleeya Zahiraa</p>
+<p><strong>Matric:</strong> A210041</p>
+<p><strong>Programme:</strong> Bachelor of Software Engineering</p>
+<p><strong>Instructor:</strong> Dr Nazatul</p>
 </div>
-
-<div class="card">
-<h3>Lab 5</h3>
-<p>Screenshot</p>
-<p>YouTube Link</p>
-<p>Reflection</p>
+<div class="about-card">
+<h3>NutriLink</h3>
+<p>NutriLink supports SDG Goal 2: Zero Hunger by promoting food management, reducing food waste and encouraging food sharing through digital technology.</p>
 </div>
-
+</div>
 </section>
 
-<section id="project1">
-<h2>Project 1</h2>
-
-<p>Problem Statement</p>
-<p>Features</p>
-<p>GitHub Repository</p>
-<p>YouTube VSR</p>
-
+<section class="section" id="labs">
+<h2 class="section-title">Lab Portfolio</h2>
+<div class="lab-grid">
+<div class="lab-card"><h3>Lab 1</h3><p>UI Design</p><a class="card-btn" href="https://youtu.be/0x3FApLUYog">Watch VSR</a></div>
+<div class="lab-card"><h3>Lab 2</h3><p>User Interaction</p><a class="card-btn" href="https://youtu.be/QxdN73XHGfM">Watch VSR</a></div>
+<div class="lab-card"><h3>Lab 3</h3><p>Material Design</p><a class="card-btn" href="https://youtu.be/nF2XmDgSwUA">Watch VSR</a></div>
+<div class="lab-card"><h3>Lab 4</h3><p>Navigation</p><a class="card-btn" href="https://youtu.be/TFZdcT50SxA">Watch VSR</a></div>
+<div class="lab-card"><h3>Lab 5</h3><p>Room Database</p><a class="card-btn" href="https://youtu.be/61Hpm7WRsjc">Watch VSR</a></div>
+</div>
 </section>
 
-<section id="project2">
-<h2>Project 2</h2>
-
-<p>Problem Statement</p>
-<p>Room Database</p>
-<p>Firebase Firestore</p>
-<p>REST API</p>
-<p>Sensor Integration</p>
-<p>GitHub Repository</p>
-<p>YouTube VSR</p>
-
+<section class="section" id="projects">
+<h2 class="section-title">Projects</h2>
+<div class="project-card">
+<h3>Project 1 – NutriLink</h3>
+<p>Food waste management platform aligned with SDG 2.</p>
+<p><a class="card-btn" href="https://youtu.be/-aXthN5pSKs">Project 1 VSR</a></p>
+</div>
+<br>
+<div class="project-card">
+<h3>Project 2 – NutriLink</h3>
+<p>Features: Room Database, Firebase Firestore, REST API Integration, Sensor Integration, 7+ Screens.</p>
+<p><strong>VSR:</strong> Coming Soon</p>
+</div>
 </section>
 
-<section id="reflection">
-<h2>Reflection & Learning Journey</h2>
-
-<p>
-My understanding of Android development has improved
-significantly from Lab 1 until Project 2.
-</p>
-
+<section class="section" id="journey">
+<h2 class="section-title">Learning Journey</h2>
+<div class="timeline">
+<div class="timeline-item">Lab 1 → Building UI with Jetpack Compose</div>
+<div class="timeline-item">Lab 2 → Managing User Interaction</div>
+<div class="timeline-item">Lab 3 → Applying Material Design</div>
+<div class="timeline-item">Lab 4 → Multi‑Screen Navigation</div>
+<div class="timeline-item">Lab 5 → Local Persistence with Room</div>
+<div class="timeline-item">Project 1 → SDG Based Application</div>
+<div class="timeline-item">Project 2 → Cloud, API & Sensor Integration</div>
+</div>
 </section>
 
-<section id="skills">
-<h2>Skills & Tech Stack</h2>
-
-<ul>
-<li>Kotlin</li>
-<li>Jetpack Compose</li>
-<li>Firebase</li>
-<li>Room Database</li>
-<li>Retrofit API</li>
-<li>GitHub</li>
-</ul>
-
-</section>
-
-<section>
-<h2>Resources & References</h2>
-
-<ul>
-<li>Android Developer Documentation</li>
-<li>Firebase Documentation</li>
-<li>Retrofit Documentation</li>
-<li>ChatGPT</li>
-</ul>
-
+<section class="section" id="skills">
+<h2 class="section-title">Skills & Technologies</h2>
+<div class="skills">
+<div class="skill">Kotlin</div>
+<div class="skill">Jetpack Compose</div>
+<div class="skill">Firebase</div>
+<div class="skill">Room Database</div>
+<div class="skill">REST API</div>
+<div class="skill">Android Studio</div>
+<div class="skill">GitHub</div>
+</div>
 </section>
 
 <footer>
-<p>Mobile Programming E-Portfolio 2026</p>
+<p>© 2026 Aleeya Zahiraa • NutriLink Portfolio • SDG 2 Zero Hunger</p>
 </footer>
 
 </body>
 </html>
+
+<footer>
+    <p>© 2026 Aleeya Zahiraa | Mobile Programming E-Portfolio</p>
+</footer>
