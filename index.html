@@ -1,144 +1,996 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NutriLink Premium Portfolio</title>
+
+<title>Aleeya Zahiraa | NutriLink Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Poppins,sans-serif;background:#fffdf7;color:#333}
-nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);padding:18px 8%;display:flex;justify-content:space-between;z-index:999;box-shadow:0 2px 20px rgba(0,0,0,.08)}
-nav a{text-decoration:none;color:#444;font-weight:600;margin-left:20px}
-.logo{font-size:1.6rem;font-weight:700;color:#f4b400}
-.hero{min-height:100vh;background:linear-gradient(135deg,#fff8d6,#ffd54f);display:flex;align-items:center;padding:120px 8%}
-.hero-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
-.hero h1{font-size:4.5rem;color:#5d4037}
-.hero h2{color:#ff8f00;margin:10px 0}
-.hero img{width:360px;height:360px;border-radius:50%;object-fit:cover;border:8px solid white;box-shadow:0 20px 40px rgba(0,0,0,.2)}
-.btn{display:inline-block;background:#f4b400;color:white;padding:12px 22px;border-radius:30px;text-decoration:none;margin-right:10px;margin-top:20px}
-.section{padding:100px 8%}
-.title{text-align:center;font-size:2.8rem;color:#5d4037;margin-bottom:40px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px}
-.card{background:white;border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:.3s}
-.card:hover{transform:translateY(-8px)}
-.content{padding:24px}
-.video{position:relative;padding-bottom:56.25%;height:0}
-.video iframe{position:absolute;width:100%;height:100%;left:0;top:0}
-.badge{display:inline-block;background:#ffe082;padding:8px 14px;border-radius:20px;margin:5px;font-weight:600}
-.timeline-item{background:white;padding:20px;border-left:5px solid #f4b400;margin:15px 0;border-radius:12px}
-footer{background:#5d4037;color:white;text-align:center;padding:30px}
-@media(max-width:900px){.hero-wrap{grid-template-columns:1fr;text-align:center}.hero h1{font-size:3rem}.hero img{width:250px;height:250px;margin:auto}}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fffdf7;
+    color:#333;
+    line-height:1.7;
+}
+
+:root{
+    --primary:#f4b400;
+    --primary-dark:#e39b00;
+    --primary-light:#fff8d6;
+    --accent:#ff8f00;
+    --dark:#5d4037;
+    --card-shadow:0 12px 28px rgba(0,0,0,.08);
+    --hover-shadow:0 18px 35px rgba(0,0,0,.12);
+}
+
+.sticky-nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #eee;
+}
+
+nav{
+    max-width:1300px;
+    margin:auto;
+    padding:18px 40px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:600;
+    transition:.3s;
+    border-bottom:2px solid transparent;
+    padding-bottom:4px;
+}
+
+nav a:hover{
+    color:var(--accent);
+    border-bottom:2px solid var(--accent);
+}
+
+.hero{
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #fff8d6,
+        #ffd54f
+    );
+    display:flex;
+    align-items:center;
+    padding:80px 8%;
+}
+
+.hero-wrap{
+    width:100%;
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.hero-content h1{
+    font-size:4.5rem;
+    color:var(--dark);
+    margin-bottom:10px;
+}
+
+.hero-content h2{
+    color:var(--accent);
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    margin-bottom:10px;
+}
+
+.hero-image{
+    text-align:center;
+}
+
+.hero-image img{
+    width:340px;
+    height:340px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--primary-dark);
+}
+
+.container{
+    max-width:1300px;
+    margin:auto;
+    padding:80px 30px;
+}
+
+section{
+    scroll-margin-top:100px;
+}
+
+.section-title{
+    font-size:2.2rem;
+    color:var(--dark);
+    margin-bottom:35px;
+    border-left:6px solid var(--primary);
+    padding-left:15px;
+}
+
+.intro-card{
+    background:white;
+    padding:30px;
+    border-radius:24px;
+    box-shadow:var(--card-shadow);
+}
+
+.grid-2cols{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:var(--card-shadow);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--hover-shadow);
+}
+
+.card-content{
+    padding:24px;
+}
+
+.card-content h3{
+    color:var(--dark);
+    margin-bottom:15px;
+}
+  .card-content p{
+    text-align:justify;
+}
+
+.reflection{
+    text-align:justify;
+}
+
+.intro-card p{
+    text-align:justify;
+}
+
+.video-wrapper{
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    border-radius:15px;
+    margin:15px 0;
+}
+
+.video-wrapper iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+.btn-github{
+    display:inline-block;
+    background:#222;
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:25px;
+    margin-top:15px;
+    font-size:.9rem;
+    transition:.3s;
+}
+
+.btn-github:hover{
+    background:var(--accent);
+}
+
+.reflection{
+    margin-top:18px;
+    background:#fff9e6;
+    border-left:4px solid var(--primary);
+    padding:15px;
+    border-radius:12px;
+    font-size:.95rem;
+}
+
+.skills-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill-badge{
+    background:#ffe082;
+    padding:10px 16px;
+    border-radius:30px;
+    font-weight:500;
+}
+
+.resources-box{
+    background:white;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:var(--card-shadow);
+}
+
+.resources-box ul{
+    padding-left:20px;
+}
+
+.resources-box li{
+    margin-bottom:10px;
+}
+
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin-bottom:8px;
+}
+
+@media(max-width:900px){
+
+.hero-wrap{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:3rem;
+}
+
+.hero-image img{
+    width:250px;
+    height:250px;
+}
+
+nav{
+    gap:15px;
+}
+
+}
+
 </style>
 </head>
 <body>
 
-<nav>
-<div class="logo">🍎 NutriLink</div>
-<div>
-<a href="#about">About</a>
-<a href="#labs">Labs</a>
-<a href="#projects">Projects</a>
-<a href="#journey">Journey</a>
-<a href="#skills">Skills</a>
-</div>
-</nav>
-
-<section class="hero">
-<div class="hero-wrap">
-<div>
-<h1>Aleeya Zahiraa</h1>
-<h2>Mobile Programming E‑Portfolio</h2>
-<p>Bachelor of Software Engineering • SDG 2 Zero Hunger</p>
-<p>Building NutriLink to support food sustainability through mobile technology.</p>
-<a class="btn" href="#labs">Explore Labs</a>
-<a class="btn" href="#projects">Projects</a>
-</div>
-<div style="text-align:center">
-<img src="profile.jpg">
-</div>
-</div>
-</section>
-
-<section id="about" class="section">
-<h2 class="title">About Me</h2>
-<div class="card"><div class="content">
-<p><strong>Name:</strong> Aleeya Zahiraa</p>
-<p><strong>Matric:</strong> A210041</p>
-<p><strong>Programme:</strong> Bachelor of Software Engineering</p>
-<p><strong>Instructor:</strong> Dr Nazatul</p>
-<p><strong>Application:</strong> NutriLink</p>
-<p><strong>SDG:</strong> Goal 2 - Zero Hunger</p>
-</div></div>
-</section>
-
-<section id="labs" class="section">
-<h2 class="title">Lab Portfolio</h2>
-<div class="grid">
-
-<div class="card"><div class="video"><iframe src="https://www.youtube.com/embed/0x3FApLUYog"></iframe></div><div class="content"><h3>Lab 1</h3><p>UI Design for NutriLink.</p></div></div>
-
-<div class="card"><div class="video"><iframe src="https://www.youtube.com/embed/QxdN73XHGfM"></iframe></div><div class="content"><h3>Lab 2</h3><p>User Interaction and usability improvements.</p></div></div>
-
-<div class="card"><div class="video"><iframe src="https://www.youtube.com/embed/nF2XmDgSwUA"></iframe></div><div class="content"><h3>Lab 3</h3><p>Material Design implementation.</p></div></div>
-
-<div class="card"><div class="video"><iframe src="https://www.youtube.com/embed/TFZdcT50SxA"></iframe></div><div class="content"><h3>Lab 4</h3><p>Navigation and multi-screen flow.</p></div></div>
-
-<div class="card"><div class="video"><iframe src="https://www.youtube.com/embed/61Hpm7WRsjc"></iframe></div><div class="content"><h3>Lab 5</h3><p>Room Database integration.</p></div></div>
-
-</div>
-</section>
-
-<section id="projects" class="section">
-<h2 class="title">Project Showcase</h2>
-
-<div class="card">
-<div class="video"><iframe src="https://www.youtube.com/embed/-aXthN5pSKs"></iframe></div>
-<div class="content">
-<h3>Project 1 - NutriLink</h3>
-<p>Food sustainability platform aligned with SDG 2.</p>
-<p><strong>Repository:</strong> Google Drive Project Repository</p>
-</div>
+<div class="sticky-nav">
+    <nav>
+        <a href="#home">🥗 Home</a>
+        <a href="#about">🍎 About</a>
+        <a href="#labs">🥬 Labs</a>
+        <a href="#projects">🍱 Projects</a>
+        <a href="#reflection">🍽️ Reflection</a>
+        <a href="#skills">🥑 Skills</a>
+        <a href="#resources">🍊 Resources</a>
+    </nav>
 </div>
 
-<br><br>
+<!-- HERO SECTION -->
 
-<div class="card">
-<div class="content">
-<h3>Project 2 - NutriLink</h3>
-<p>Room Database, Firebase Firestore, REST API and Sensor Integration.</p>
-<p><strong>VSR:</strong> Coming Soon</p>
-</div>
-</div>
+<section class="hero" id="home">
+
+    <div class="hero-wrap">
+
+        <div class="hero-content">
+
+            <h1>Aleeya Zahiraa</h1>
+
+            <h2>Mobile Programming E-Portfolio</h2>
+
+            <p>
+                <strong>Programme:</strong>
+                Bachelor of Software Engineering
+            </p>
+
+            <p>
+                <strong>Application:</strong>
+                NutriLink
+            </p>
+
+            <p>
+                <strong>SDG Goal:</strong>
+                2 - Zero Hunger
+            </p>
+
+            <p>
+                Building a food sustainability platform through
+                mobile technology to reduce food waste and support
+                food sharing initiatives.
+            </p>
+
+            <a href="#labs" class="btn">
+                🥬 Explore Labs
+            </a>
+
+            <a href="#projects" class="btn">
+                🍱 View Projects
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="profile.jpg" alt="Profile Picture">
+
+        </div>
+
+    </div>
 
 </section>
 
-<section id="journey" class="section">
-<h2 class="title">Learning Journey</h2>
-<div class="timeline-item">Lab 1 - User Interface Design</div>
-<div class="timeline-item">Lab 2 - User Interaction</div>
-<div class="timeline-item">Lab 3 - Material Design</div>
-<div class="timeline-item">Lab 4 - Navigation</div>
-<div class="timeline-item">Lab 5 - Room Database</div>
-<div class="timeline-item">Project 1 - NutriLink</div>
-<div class="timeline-item">Project 2 - Advanced Mobile Features</div>
+<div class="container">
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">
+        🥗 About Me
+    </h2>
+
+    <div class="intro-card">
+
+        <p>
+            <strong>Name:</strong>
+            Aleeya Zahiraa
+        </p>
+
+        <p>
+            <strong>Matric No:</strong>
+            A210041
+        </p>
+
+        <p>
+            <strong>Programme:</strong>
+            Bachelor of Software Engineering
+        </p>
+
+        <p>
+            <strong>Instructor:</strong>
+            Dr Nazatul
+        </p>
+
+        <p>
+            <strong>Application:</strong>
+            NutriLink
+        </p>
+
+        <p>
+            <strong>SDG Goal:</strong>
+            Goal 2 - Zero Hunger
+        </p>
+
+    </div>
+
 </section>
 
-<section id="skills" class="section">
-<h2 class="title">Skills & Technologies</h2>
-<div style="text-align:center">
-<span class="badge">Kotlin</span>
-<span class="badge">Jetpack Compose</span>
-<span class="badge">Firebase</span>
-<span class="badge">Room Database</span>
-<span class="badge">REST API</span>
-<span class="badge">Android Studio</span>
-<span class="badge">GitHub</span>
-</div>
+<!-- LABS -->
+
+<section id="labs">
+
+    <h2 class="section-title">
+        🥬 Labs
+    </h2>
+
+    <div class="grid-2cols">
+
+        <!-- LAB 1 -->
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>🥬 Lab 1 - UI Design</h3>
+
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/0x3FApLUYog"
+                    allowfullscreen></iframe>
+                </div>
+
+                <p>
+                    <strong>Description:</strong>
+                    This lab focused on developing the initial
+                    user interface of NutriLink using Jetpack Compose.
+                </p>
+
+                <a href="https://drive.google.com/drive/folders/1aiYK56eir5slUq5Bz2bdV4kd273Oro7v?usp=sharing"
+                target="_blank"
+                class="btn-github">
+                🥗 View Repository
+                </a>
+
+                <div class="reflection">
+
+                    <strong>Lessons Learned:</strong>
+
+                    Through this lab, I learned the fundamentals
+                    of Jetpack Compose and how composable functions
+                    work together to create responsive mobile interfaces.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- LAB 2 -->
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>🥕 Lab 2 - User Interaction</h3>
+
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/QxdN73XHGfM"
+                    allowfullscreen></iframe>
+                </div>
+
+                <p>
+                    <strong>Description:</strong>
+                    This lab introduced state management,
+                    user inputs and interactive components.
+                </p>
+
+                <a href="https://drive.google.com/drive/folders/1F_zrnHuqSkdVsQt1nLLbSbFx0WSsoAAf?usp=sharing"
+                target="_blank"
+                class="btn-github">
+                🥗 View Repository
+                </a>
+
+                <div class="reflection">
+
+                    <strong>Lessons Learned:</strong>
+
+                    I learned how user actions affect application
+                    state and how Compose responds dynamically
+                    to changes.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- LAB 3 -->
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>🍅 Lab 3 - Material Design</h3>
+
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/nF2XmDgSwUA"
+                    allowfullscreen></iframe>
+                </div>
+
+                <p>
+                    <strong>Description:</strong>
+                    Applying Material Design components and themes
+                    to improve visual consistency.
+                </p>
+
+                <a href="https://drive.google.com/drive/folders/1rQHKwvqy5LkKt1s767y-pSZb1fOHKSGG?usp=sharing"
+                target="_blank"
+                class="btn-github">
+                🥗 View Repository
+                </a>
+
+                <div class="reflection">
+
+                    <strong>Lessons Learned:</strong>
+
+                    I learned how Material Design principles improve
+                    accessibility and create a more professional UI.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- LAB 4 -->
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>🥦 Lab 4 - Navigation</h3>
+
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/TFZdcT50SxA"
+                    allowfullscreen></iframe>
+                </div>
+
+                <p>
+                    <strong>Description:</strong>
+                    Implementing Navigation Compose for multi-screen
+                    Android applications.
+                </p>
+
+                <a href="https://drive.google.com/drive/folders/1zVZNCCHW6emRsYwb58sUadURbDpGtBub?usp=sharing"
+                target="_blank"
+                class="btn-github">
+                🥗 View Repository
+                </a>
+
+                <div class="reflection">
+
+                    <strong>Lessons Learned:</strong>
+
+                    I learned how navigation routes connect
+                    different screens into a seamless user flow.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- LAB 5 -->
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>🍞 Lab 5 - Room Database</h3>
+
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/61Hpm7WRsjc"
+                    allowfullscreen></iframe>
+                </div>
+
+                <p>
+                    <strong>Description:</strong>
+                    Integrating Room Database for local storage
+                    and offline functionality.
+                </p>
+
+                <a href="https://drive.google.com/drive/folders/1ld3l_bf1qyerSLradm-ghz6K0Srq7q-H?usp=sharing"
+                    target="_blank"
+                    class="btn-github">
+                    🥗 View Repository
+                </a>
+
+                <div class="reflection">
+
+                    <strong>Lessons Learned:</strong>
+
+                    I learned how to implement local persistence
+                    using Room Database and manage structured data.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="section-title">
+        🍱 Projects
+    </h2>
+
+    <div class="grid-2cols">
+
+        <!-- PROJECT 1 -->
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>
+                    🍱 NutriLink Navigation + ViewModel
+                </h3>
+
+                <p>
+
+                    <strong>Problem Statement:</strong>
+
+                    Food waste continues to be a global issue while
+                    many communities still face food insecurity.
+                    NutriLink provides a platform that encourages
+                    food sharing and promotes sustainability.
+
+                </p>
+
+                <div class="video-wrapper">
+
+                    <iframe
+                    src="https://www.youtube.com/embed/-aXthN5pSKs"
+                    allowfullscreen></iframe>
+
+                </div>
+
+                <a href="https://github.com/aleeyaznl/A210041_AleeyaZahiraa_Project1"
+                target="_blank"
+                class="btn-github">
+
+                    🍱 View on GitHub
+
+                </a>
+
+                <div class="reflection">
+
+                    <strong>Lessons Learned:</strong>
+
+                    Through Project 1, I learned how to manage
+                    navigation between multiple screens and implement
+                    ViewModel architecture for efficient state management.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>
+                    🍲 NutriLink Cloud + Sensors + API
+                </h3>
+
+                <p>
+
+                    <strong>Problem Statement:</strong>
+
+                    Project 2 extends NutriLink with cloud storage,
+                    APIs and sensors to create a smarter and more
+                    connected food sustainability platform.
+
+                </p>
+
+                <div class="video-wrapper">
+
+                    <iframe
+                    src="https://www.youtube.com/embed/nR1a5aOCORw"
+                    allowfullscreen></iframe>
+
+                </div>
+
+                <a href="https://github.com/aleeyaznl/A210041_AleeyaZahiraa_Project2"
+                target="_blank"
+                class="btn-github">
+
+                    🍲 View on GitHub
+
+                </a>
+
+                <div class="reflection">
+
+                    <strong>Features Implemented:</strong>
+
+                    <br>• Room Database
+                    <br>• Firebase Firestore
+                    <br>• REST API Integration
+                    <br>• Sensor Integration
+                    <br>• 7+ Screen Navigation
+
+                </div>
+
+                <div class="reflection">
+
+                    <strong>Lessons Learned:</strong>
+
+                    Through Project 2, I learned how to combine
+                    local storage, cloud synchronization,
+                    REST APIs and sensors into a single Android
+                    application.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- REFLECTION -->
+
+<section id="reflection">
+
+    <h2 class="section-title">
+        🍽️ Reflection & Learning Journey
+    </h2>
+
+    <div class="intro-card">
+
+        <p>
+
+            Throughout this course, I progressed from creating
+            simple user interfaces using Jetpack Compose to
+            developing complete Android applications integrated
+            with Room Database, Firebase Firestore, REST APIs,
+            and mobile sensors.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Each laboratory exercise introduced new concepts
+            that gradually expanded my understanding of mobile
+            application development. Beginning with UI design,
+            user interaction, and navigation, I eventually
+            learned how to manage local persistence, cloud
+            synchronization, external data sources, and hardware
+            integration.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Through NutriLink, I gained practical experience in
+            designing solutions that support SDG Goal 2:
+            Zero Hunger. This project allowed me to combine
+            technical skills with social impact by creating a
+            platform that promotes food sustainability and
+            community food sharing.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Overall, this course strengthened my problem-solving,
+            debugging, UI/UX design, and software architecture
+            skills while preparing me for future mobile
+            application development projects.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h2 class="section-title">
+        🥑 Skills & Technologies
+    </h2>
+
+    <div class="skills-list">
+
+        <span class="skill-badge">Kotlin</span>
+
+        <span class="skill-badge">Jetpack Compose</span>
+
+        <span class="skill-badge">Navigation Compose</span>
+
+        <span class="skill-badge">ViewModel</span>
+
+        <span class="skill-badge">Room Database</span>
+
+        <span class="skill-badge">Firebase Firestore</span>
+
+        <span class="skill-badge">REST API</span>
+
+        <span class="skill-badge">Sensor Integration</span>
+
+        <span class="skill-badge">Android Studio</span>
+
+        <span class="skill-badge">GitHub</span>
+
+        <span class="skill-badge">Material Design</span>
+
+        <span class="skill-badge">UI/UX Design</span>
+
+    </div>
+
+</section>
+
+<!-- RESOURCES -->
+
+<section id="resources">
+
+    <h2 class="section-title">
+        🍎 Resources & References
+    </h2>
+
+    <div class="resources-box">
+
+        <h3>
+            SDG Resources
+        </h3>
+
+        <br>
+
+        <ul>
+
+            <li>
+                <a href="https://sdgs.un.org/goals/goal2"
+                target="_blank">
+
+                    United Nations SDG Goal 2:
+                    Zero Hunger
+
+                </a>
+            </li>
+
+            <li>
+                Food Sustainability Initiatives
+            </li>
+
+            <li>
+                Community Food Sharing Programmes
+            </li>
+
+        </ul>
+
+        <br><br>
+
+        <h3>
+            Developer References
+        </h3>
+
+        <br>
+
+        <ul>
+
+            <li>
+
+                <a href="https://developer.android.com/jetpack/compose"
+                target="_blank">
+
+                    Jetpack Compose Documentation
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="https://firebase.google.com/docs"
+                target="_blank">
+
+                    Firebase Documentation
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="https://developer.android.com/training/data-storage/room"
+                target="_blank">
+
+                    Room Database Documentation
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="https://developer.android.com"
+                target="_blank">
+
+                    Android Developers Guide
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="https://github.com"
+                target="_blank">
+
+                    GitHub Documentation
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+</div>
+
+<!-- FOOTER -->
 
 <footer>
-<p>© 2026 Aleeya Zahiraa • NutriLink • SDG 2 Zero Hunger</p>
+
+    <p>
+
+        © 2026 Aleeya Zahiraa (A210041)
+
+    </p>
+
+    <p>
+
+        Bachelor of Software Engineering
+
+    </p>
+
+    <p>
+
+        NutriLink • SDG Goal 2: Zero Hunger
+
+    </p>
+
+    <p>
+
+        Instructor: Dr Nazatul
+
+    </p>
+
 </footer>
 
 </body>
